@@ -31,7 +31,7 @@ jobs:
           flutter-version: '3.10.5'
       - run: flutter pub get
       - run: flutter clean
-      - run: flutter build apk --debug 
+      - run: flutter build apk 
       - uses: actions/upload-artifact@v1
         with:
           name: apk-release

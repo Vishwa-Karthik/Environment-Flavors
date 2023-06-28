@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner:
-          flavor == AppFlavor.prod.toString() ? true : false,
+          flavor == AppFlavor.prod.toString() ? false : true,
       theme: ThemeData(useMaterial3: true, primarySwatch: Colors.brown),
       home: Home(
         flavor: flavor,
@@ -30,8 +30,7 @@ class Home extends StatelessWidget {
         title: Text(flavor),
       ),
       body: Center(
-        child: Text(
-            dotenv.get("DEV_DOMAIN", fallback: "Could not load").toString()),
+        child: Text(dotenv.env['DEV_DOMAIN'].toString() ?? "No value found"),
       ),
     );
   }

@@ -25,6 +25,7 @@ jobs:
       - uses: SpicyPizza/create-envfile@v1
         with:
           envkey_DEV_DOMAIN: ${{ secrets.DEV_DOMAIN }}
+          file_name: .env_dev
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'

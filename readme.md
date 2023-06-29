@@ -188,6 +188,7 @@ API_URL=com.app.dev
 
 ## URL
 [Youtube Video](https://youtu.be/Vto5JHaRcQw)
+[Youtube Tutorial](https://www.youtube.com/watch?v=Vto5JHaRcQw)
 
 ---
 ---

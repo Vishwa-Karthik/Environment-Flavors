@@ -33,10 +33,11 @@ jobs:
       - run: flutter clean
       - run: flutter pub get
       - run: flutter run -t lib/main_dev.dart --flavor dev
-      - run: flutter build apk 
+      - run: flutter build appbundle
       - uses: actions/upload-artifact@v1
         with:
           name: apk-release
+          path: build/app/outputs/bundle/release/app-release.aab
 
   deployProd:
     name: 'Deploy to Production environment'

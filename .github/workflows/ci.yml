@@ -30,8 +30,8 @@ jobs:
         with:
           channel: 'stable'
           flutter-version: '3.10.5'
-      - run: flutter pub get
       - run: flutter clean
+      - run: flutter pub get
       - run: flutter run -t lib/main_dev.dart --flavor dev 
       - run: flutter build apk 
       - uses: actions/upload-artifact@v1

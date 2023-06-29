@@ -35,8 +35,7 @@ jobs:
       - run: flutter build apk --debug
       - uses: actions/upload-artifact@v1
         with:
-          name: apk-dev-debug
-          path: build/app/outputs/flutter-apk/app-dev-debug.apk
+          path: "build/app/outputs/apk/debug/*"
 
   deployProd:
     name: 'Deploy to Production environment'

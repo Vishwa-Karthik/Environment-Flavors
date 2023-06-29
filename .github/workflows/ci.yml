@@ -33,9 +33,10 @@ jobs:
       - run: flutter clean
       - run: flutter pub get
       - run: flutter build apk --debug
-      - uses: actions/upload-artifact@v1
+      - name: Push to Release
+      - uses: ncipollo/release-action@v1
         with:
-          path: "build/app/outputs/apk/debug/*"
+          artifacts: "build/app/outputs/apk/debug/*"
 
   deployProd:
     name: 'Deploy to Production environment'

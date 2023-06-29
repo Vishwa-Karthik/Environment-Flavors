@@ -34,7 +34,7 @@ jobs:
       - run: flutter pub get
       - run: flutter build apk --debug
       - name: Push to Release
-      - uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*"
 
